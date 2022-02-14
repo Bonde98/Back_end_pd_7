@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenue dans le blog d'article</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark position-fixed w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SOCIAL MEDIAS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+           aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon btn-warning"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-brand text-warning active" href="{% url 'articles' %}">Les Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'page_detail' %}">Détail D'article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'profile' %}">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'about' %}">A Propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'inscription' %}">Inscription</a>
+              </li>     
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'connexion' %}">Connexion</a>
+              </li>          
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'creation_article' %}">Création D'article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'modifier_article' %}">Modifier Article</a>
+              </li>       
+                 
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'supprimer' %}">Supprimer</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Recherche</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+          <!---Section des articles-->
+          <section class="des-articles bg-dark text-light p-5 text-center">
+
+            <section class="article-1">
+              <div class="row py-5 text-warning">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 py-5">
+                  <h1>Bienvenue dans la 2e page ,ou j'affiche la listes des 10 articles par pagination  </h1>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+                <div class="row container-fluid">
+                  <div class="col-md-4 py-5">
+                    <h6>Article:1</h6>
+                    <a href="https://www.lalibre.be/economie/decideurs-chroniqueurs/2021/03/28/avec-plusieurs-milliards-dutilisateurs-les-medias-sociaux-sont-devenus-des-outils-de-pouvoir-TVFDSABUVJA2HLLY24UVX7GK3Q/" ><img src="{% static 'image/trum3NOXI6WRHBD6XBYADBANH7QSUE.jpg' %}" class="img-fluid rounded-start" alt="..."></a>
+                    <h6>Donald Trump a fait un usage important de Twitter dans sa stratégie de communication.</h6>
+                    <h1 class="text-warning">Avec plusieurs milliards d'utilisateurs, les médias sociaux sont devenus des outils de pouvoir</h1>
+                     
+                  </div>
+                  <div class="col-md-8 py-5">
+                    <div>
+                      <h4>Introduction</h4>
+                      <p>Au cours de la dernière décennie, les réseaux sociaux n’ont cessé de proliférer. Va-t-on vers une suprématie absolue du "cinquième pouvoir" ? Une chronique de Marie-Isabelle Muninger, professeure de marketing et chercheure, Ichec Brussels Management School.
+                      </p>
+                      <p>Depuis peu, les médias sociaux se retrouvent régulièrement au cœur de l’actualité. Le contexte Covid-19, les élections américaines, l’assaut du capitole et le code de conduite Australien sont quelques exemples de contextes illustrant la prise de pouvoir de plateformes digitales telles qu’Airbnb et Facebook. </p>
+                      <p>Ainsi, en août dernier, Airbnb bloque plus de 30 000 réservations pour éviter l’organisation de fêtes clandestines dans le contexte sanitaire du coronavirus. La même décision est prise à la suite de l’assaut du capitole afin d’éviter les débordements lors de l’investiture de Joe Biden. </p>
+                      <p>Les administrateurs de Facebook, tout comme leurs homologues chez Twitter, prennent, quant à eux, la décision de renforcer leur modération lors des élections américaines et bloquent également le compte de Donald Trump. Plus récemment, Facebook a réussi à faire amender une loi australienne visant à contraindre les géants du numérique à payer les groupes de presse pour le contenu relayé via leurs plateformes.</p>
+                      <h4>Le revers de la médaille ?</h4>
+                      <p>Inoffensifs au premier regard, les médias sociaux sont devenus des outils de pouvoir à part entière, permettant la propagande, la manipulation de données, la diffusion de fake news et la censure. Les trois pouvoirs indépendants décrits par Montesquieu - le législatif (les élus), l’exécutif (le Gouvernement) et le judiciaire - ne composent plus uniquement avec le "quatrième pouvoir" (la presse) mais doivent faire face aujourd’hui à un "cinquième pouvoir".</p>
+                      <p>Le terme "cinquième pouvoir" fut introduit par le journaliste, sociologue et écrivain Ignacio Ramonet en 2003. Il désigne principalement la montée en puissance de l’opinion publique, initialement facilitée par les médias sociaux, pour s’opposer aux pouvoirs existants, y compris la presse.</p>
+                      <p>Dès leur apparition, les médias sociaux ont modéré les contenus illégaux et offensants publiés par leurs utilisateurs. Ce contrôle a récemment dévié vers une censure des opinions ne cadrant pas avec la vision des gérants de ces géants du web : tout contenu enfreignant le "politiquement correct" est automatiquement bloqué. La censure des critiques à l’égard de la gestion de la pandémie actuelle et les élections américaines nous l’ont démontré à maintes reprises. </p>
+                      <p>L’invasion du cinquième pouvoir dans nos vies privées et la portée politique des médias sociaux représentent un enjeu majeur pour nos démocraties, menaçant ainsi nos libertés individuelles. Le fameux "Je suis Charlie", ironiquement relayé par le biais de ces plateformes, semble déjà bien loin. À moins que Charlie n’ait lui-même attrapé le Covid-19 ?</p>
+                      <p>Publié le 28-03-2021 à 08h00 <br> Mis à jour le 26-03-2021 à 15h41</p> 
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="article-2 ">
+                  <div class="container-fluid  ">
+                    <div class="row py-5 ">
+                      <div class="col-md-4">
+                        <h6>Article : 2</h6>
+                        <a href="https://www.erudit.org/fr/revues/crs/1990-n14-crs1516363/1002096ar.pdf"><img src="{% static 'image/linatéléchargement.jpg' %}" alt=""></a> 
+                        <p class="text-uppercase">PAR Lina TRUDEL <br> Date : pritemps 1990 <br>
+                           Document généré le 29 nov. 2021 11:42</p>
+                </div>
+                        <div class="col-md-8 py-5">
+                            <h1 class="text-warning">Le pouvoir des médias</h1>    
+                            <p>Depuis quelques années nous assistons à la mise en place de nouveaux
+                              modèles d'organisation des systèmes de communication1
+                              . L'ampleur des
+                              innovations technologiques, la rapidité de leur implantation et l'augmentation
+                              astronomique des coûts d'exploitation rendent toutefois extrêmement difficile la
+                              maîtrise sociale de ces changements. La multiplication des moyens de diffusion et
+                              des canaux de télévision va, en effet, bien au-delà de la capacité des pays (en
+                              particulier les petits) d'alimenter ces moyens en programmes de qualité. Résultats,
+                              on fait appel de plus en plus à des émissions étrangères, surtout américaines, et on
+                              s'en remet aux grands groupes privés pour assurer le développement de ces outils. </p>
+                              <p>Alors que, dans la majorité des pays occidentaux (les États-Unis en sont une
+                                exception) les médias électroniques ont été conçus comme un service d'intérêt
+                                public, ils sont considérés, aujourd'hui, comme des industries. Ce processus
+                                d'industrialisation des moyens de communication ne va cependant pas sans
+                                contradictions. La mission éducative, culturelle et démocratique des médias
+                                d'information résiste difficilement aux lois de l'auditoire et aux exigences du
+                                financement publicitaire. Pour rejoindre le plus vaste public possible, les chaînes
+                                de télévision sont amenées à programmer aux heures de grande écoute presque
+                                exclusivement des émissions de divertissement et à rendre leurs émissions
+                                d'information aussi attrayantes que les variétés. Ce mode de communication centré
+                                sur le spectacle et le sensationnel comporte des risques évidents pour la vie
+                                culturelle et démocratique</p>
+                                <p>Nous assistons à un véritable éclatement des systèmes de valeurs et des
+                                  modèles culturels. Malheureusement, nous savons très peu de chose sur la nature
+                                  et la portée de ces changements ainsi que sur l'impact des médias concernant ces
+                                  changements. Pour nous, il s'agit là d'un champ d'analyses prioritaires et nous
+                                  croyons que les sciences sociales devraient se sentir davantage interpellées par cette
+                                  urgence. </p>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            <section class="article-3">
+                <div class="card mb-3 bg-dark" style="max-width: 100%">
+                <div class="row container-fluid">
+                  <div class="col-md-4">
+                    <h6>Article:3</h6>
+                    <a href="https://www.senat.fr/europe/dossiers/conference_presidents/rapport_swaelen_lahaye94.pdf"><img src="{% static 'image/frank5DNY77IMYNE6PFGZS6CFYBJ2UY.jpg' %}" class="img-fluid rounded-start" alt="..."></a>
+                    <h6>Rapport de M. Frank SWAELEN, <br>
+                        Président du Sénat belge</h6>
+                        <h1 class="text-warning">LES MEDIAS COMME FACTEUR DE POUVOIR DANS LA POLITIQUE</h1>
+                      
+                      <p>  </p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      
+                      <p>Introduction</p>
+                      <h3>Les médias, facteur d'influence politique</h3>
+                      <p>Traditionnellement, c'est surtout à la télévision que l'on attribue un grand pouvoir
+                        d'influence. Parce que certains programmes télévisuels inciteraient à la violence, la
+                        C.E. a pris une directive en la matière, des entreprises américaines de télévision et
+                        de télédistribution ont mis au point une technique permettant de rendre des émissions inaccessibles aux enfants et la CDU et le SPD allemands ont déposé conjointement un projet de loi visant à protéger la jeunesse et à réduire la violence à la
+                        télévision.</p>
+                        <p>Les médias ne constituent donc qu'un facteur d'influence politique direct limité,
+                          surtout depuis que la presse écrite d'opinion perd du terrain et il conviendrait de
+                          vérifier s'ils ne sont pas plutôt un facteur d'influence politique indirect, du fait que
+                          ce sont eux qui conditionnent principalement l'actualité politique</p>
+                          <p>Indépendamment de ce débat sur la responsabilité (ou l'irresponsabilité) des
+                            médias et leur influence sur la politique, la démocratie parlementaire est menacée
+                            par un danger plus grand encore. A la lumière des indices d'écoute et de lecture,
+                            les médias commercialisés et multinationaux filtrent les informations parlementaires, en se fondant, outre sur la valeur d'actualité, sur trois critères principaux
+                            la dramatisation, le divertissement et la personnification.
+                            </p>
+                            <p>Parce que 60 à 70 % de ses recettes proviennent de la publicité, la presse écrite elle
+                              aussi a de plus en plus recours à des méthodes de la télévision telles que
+                              l'accentuation outrancière des scandales politiques. Et pourtant, on lit de moins en
+                              moins. C'est pourquoi, tant qu'elle dispose encore de suffisamment de capitaux, la</p>
+                              <p>(La Haye, 24 et 25 juin 1994)</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              </section>
+            <section class="article-4">
+                  <div class="row container-fluid">
+                    <div class="col-md-5">
+                      <h6>Article : 4</h6>
+                      <a href="http://ses.ens-lyon.fr/articles/leconomie-des-reseaux-sociaux#section-1"><img src="{% static 'image/imagepleadImage_mini.jpg' %}" alt="..."></a>      
+                      <h5>Christophe Bravard est Professeur des Universités en sciences économiques depuis 2012. Il travaille actuellement à l'Université Grenoble Alpes et effectue ses recherches au sein de l'unité mixte de recherche GAEL (﻿﻿﻿Laboratoire d'Économie Appliquée de Grenoble). Il est spécialiste d'économie des réseaux, d'économie mathématique et de théorie des jeux. Ses recherches ont été publiées dans les revues Economic Theory, International Journal of Industrial Organization ou encore le Journal of Mathematical Economics. Il a présenté ses travaux aux étudiants de l'École Normale Supérieure de Lyon le 13 octobre 2017, lors de la première séance du Séminaire "Actualité de la recherche en économie" organisé par Laurent Simula, professeur d'économie à l'ENS de Lyon.</h5>
+                    </div>
+                    <div class="col-md-7 ">
+                          <h1 class="text-warning"> Réseaux sociaux et participation au marché du travail</h1>    
+                          <p>Dans un travail pionnier en théorie des réseaux, Mark Granovetter (1973) a réalisé une étude empirique sur des habitants d'une ville du Massachusetts. Dans cette étude, plus de 50% des emplois des agents ont été obtenus par le truchement de leur réseau social. Antoni Calvo-Armengo et Matthew O. Jackson (2004) ont complété ce travail en supposant que le réseau social des agents permet l'obtention d'informations concernant les opportunités d'emplois ; ils étudient les conséquences du réseau social sur la dynamique d'emploi des agents. Plus précisément, les auteurs souhaitent rendre compte du fait stylisé suivant : la participation au marché du travail d'un agent est très différente en fonction de son appartenance à certains groupes sociaux ou ethniques. Par exemple, D. Card and A.B. Krueger (1992) observent une non-participation au marché du travail 2,5 à 3 fois plus élevée pour les personnes noires que pour les personnes blanches</p>
+                          <p>Dans leur modèle, A. Calvo-Armengo et M.O. Jackson supposent que les agents perdent avec une certaine probabilité leur emploi à chaque période, et qu'avec une certaine (autre) probabilité, les agents participant au marché du travail obtiennent de l'information concernant la disponibilité d'emplois. Ainsi, un agent qui n'a pas perdu son emploi et obtient une information sur des emplois vacants peut transmettre cette information aux membres de son réseau social. En conséquence, plus le réseau social d'un agent est de qualité au regard de l'employabilité de ses membres, plus il y a de chance que cet agent obtienne de l'information quant à la disponibilité d'un emploi. Le modèle de Calvo-Armengo et Jackson induit qu'il devrait y avoir, empiriquement, une corrélation entre les niveaux de chômage des agents appartenant aux mêmes réseaux sociaux. Cette corrélation a effectivement été trouvée dans plusieurs études empiriques (G. Topa, 2001 ; T.G. Conley et G. Topa, 2001).</p>
+                          <p>Notons que cette corrélation positive a des conséquences quant à la participation ou non au marché du travail de la part des agents. À titre d'illustration, considérons deux réseaux identiques, excepté le fait que dans l'un d'eux, disons le réseau 1, les agents disposent d'une employabilité supérieure aux agents appartenant à l'autre (le réseau 2). Du fait des différences initiales d'employabilité, les agents du réseau 2 ont plus de chance de ne plus participer au marché du travail (et donc ne participent plus activement au réseau). Cette non-participation a des conséquences sur tous les membres du réseau social des agents qui ne participent plus au marché du travail. En effet, chaque chômeur réduit la possibilité d'obtenir de l'information sur un emploi vacant de l'ensemble de ses voisins (présence d'une externalité négative des chômeurs). Ainsi, il apparaît une sorte de multiplicateur social de non-participation au marché du travail, mais aussi des effets de contagion. En outre, la dynamique d'emploi conduit à des différences importantes concernant la durée de chômage des agents. Plus généralement, du fait des effets multiplicateurs et de la contagion, des conditions initiales proches en termes d'employabilité, peuvent conduire à des résultats très différents en termes d'insertion professionnelle et de durée de chômage des individus.</p>
+                          <p>Ce modèle permet de mettre en avant de nouveaux mécanismes justifiant l'intervention des autorités publiques. Chaque dépense réalisée pour l'aide à l'emploi aura non seulement des effets directs sur les agents visés, mais également des effets indirects sur les membres de leur réseau social.</p>
+                          <p class="text-uppercase">PAR Christophe Bravard (février 2018).</p>
+                      </div>   
+                  </div>
+              </section>
+            <section class="article-5">
+                  <div class="row container-fluid ">
+                    <div class="col-md-6">
+                      <h6>Article : 5</h6>
+                      <a class="align-item-center" href="https://www.jstor.org/stable/24582919">  
+                        <img src="{% static 'image/1960583.jpg' %}"  alt="...">
+                        </a>
+                        <h1 class="text-warning">Médias sociaux : clarification et cartographie Pour une approche sociotechnique</h1>
+                        <p>L’audience et la popularité croissantes des « réseaux sociaux numériques » tels que Facebook, Hi5 ou MySpace 
+                          sont accompagnées de multiples questionnements. Les entreprises se posent la question de leur intérêt commercial 
+                          et s’interrogent face aux discours de promotion de ces sites. Les chercheurs, en sciences humaines et sociales en 
+                          particulier, sont confrontés à un manque de défi nition rigoureuse pour ce nouvel objet qui est souvent confondu au sein 
+                          du Web 2.0 avec d’autres « médias - dits - sociaux ». Il convient par ailleurs de se méfi er de la propension à recycler 
+                          les théories marketing classiques sans les interroger, de la tendance à confondre usages potentiels et usages effectifs et 
+                          du manque de recul face aux processus complexes de formation des usages qui nécessitent de se pencher aussi bien sur 
+                          les contraintes techniques des dispositifs que sur les pratiques qui s’y développent. Cet article appréhende les réseaux 
+                          sociaux numériques en suivant ces lignes directrices. Il permet d’aboutir à une défi nition et une méthodologie de 
+                          recherche pour les réseaux sociaux numériques centrées sur les usages et les activités ordinaires.</p>
+                    </div>
+                    <div class="col-md-6">           
+                          <h1>Social Networks Sites: From Promotional Messages to the Defi nition of 
+                            a Subject and a Research Methodolog</h1>
+                            <h1>Abstract</h1>
+                            <p>The increase in popularity and number of users of social networks sites such as Facebook, Hi5 or MySpace has raised 
+                              numerous questions. Companies are debating the commercial opportunities and questioning the promotional messages 
+                              of these sites. Researchers, particularly those in human and social sciences, are facing a lack of clear defi nition for this 
+                              new topic, which is often confused with other so-called “social media”. The tendency to re-circulate classic marketing 
+                              theory without questioning its relevance must be avoided, as well as the tendency to confuse potential and effective 
+                              uses, and the lack of objectivity which prevents a comprehensive understanding of the complex process involved in 
+                              marrying the technical characteristics of the facility to the creative skills of the users. This article aims to tackle these 
+                              questions and, in so doing, defi ne social network sites more precisely as well as propose a methodology focused on the 
+                              uses and daily practices of internet users.</p>
+                              <h1>Investiguer le Web 2.0 et les réseaux sociaux numériques</h1>
+                        <p>Le web 2.0 constitue un phénomène récent qui interroge la communauté scientifi que mais aussi les entreprises et les hommes de marketing en particulier. Sa défi nition même en fait un objet 
+                          diffi cile à appréhender. L’expression Web 2.0 renvoie de l’aveu même de Tim O’Reilly (2005) à 
+                          une série de principes plutôt qu’à un standard. Il regroupe ses caractéristiques de la manière suivante : le Web en tant que plateforme de services facilement intégrables, l’intelligence collective, 
+                          l’importance des données utilisateurs, des mises à jour de plus en plus régulières, des modèles de 
+                          programmation légers, l’extension des outils qui interagissent avec les applications Web, l’enrichissement des interfaces utilisateurs. Les sites qualifi és de Web 2.0 doivent respecter une proportion suffi sante de ces principes. Sont ainsi majoritairement évoqués les blogs, les plateformes 
+                          de travail collaboratif, les réseaux sociaux numériques, les mashup, la folksonomy ou encore les </p>    
+                        <p class="text-align-center">PAR Thomas Stenger and Alexandre Coutant</p>
+                    </div>
+                  </div>
+              </section>
+            <section class="article-6">
+                  <div class="row py-5 container-fluid bg-dark">
+                      <div class="col-md-7">
+                        <h6>Article : 6</h6>
+                          <h1 class="text-warning"> L’impact des réseaux sociaux sur le quotidien des jeunes</h1>    
+                          <p>La technologie a une place bien importante dans la vie des jeunes. Selon certains, les réseaux sociaux sont risqués pour les adolescents. D’après moi, les médias sociaux sont un outil utile dans la vie des jeunes, mais malgré tout, il y a quand même des inconvénients. Je vais vous exprimer mon opinion à ce sujet en vous expliquant les effets de l’utilisation des réseaux sociaux sur la communication et la cyberintimidation.</p>
+                          <p>En premier lieu, grâce aux médias sociaux, les utilisateurs peuvent rester en contact avec leurs amis et les membres de leur famille. Si vous utilisez ces outils de communication, vous pouvez rapidement répandre de l’information. Les jeunes peuvent aussi partager leurs photos et se tisser plusieurs liens d’amitié. Bref, les médias sociaux sont capables d’améliorer la communication de notre communauté.</p>
+                          <p>En second lieu, la cyberintimidation est fréquente sur les réseaux sociaux. Selon la police de Montréal, ce type d’intimidation peut causer la perte de l’estime de soi, la dépression et dans certains cas, le suicide. La police de Montréal a aussi affirmé que plus de 27% des jeunes ont avoués avoir été intimidé par quelqu’un sur l’internet. Un cas de cyberintimidation a lieu lorsque les gens utilisent la technologie pour harceler quelqu’un. Lorsque les intimidateurs diffusent des images ou des messages insultants ou menaçants, c’est un cas de cyberintimidation. Ce type d’intimidation est une situation grave et elle trouve sa place facilement dans les médias sociaux.</p>
+                          <p>Pour conclure, les utilisateurs des médias sociaux sont capables du meilleur comme du pire. Les réseaux sociaux sont une bonne source de communication, mais c’est un environnement idéal pour la cyberintimidation. D’après vous, est-ce que les médias sociaux ont une influence négative sur le quotidien des adolescents?</p> 
+                      </div>
+                      <div class="col-md-5 py-5 justify-content-center">
+                            <a href="http://www.spvm.qc.ca/fr/Fiches/Details/Cyberintimidation"><img src="{% static 'image/impacttéléchargement.jpg' %}" alt=""></a>
+                            <p class="text-uppercase"> Jan 19, 2016 ~ Par Josiane Cormier</p>
+                      </div>
+                  </div>
+              </section>
+            <section class="article-7 py-5">
+                  <div class="row container-fluid ">
+                    <div class="col-md-5">
+                      <h6>Article : 7</h6>
+                      <a href="https://www.ledevoir.com/opinion/idees/629796/point-de-vue-electoral-medias-sociaux-coups-d-epee-dans-l-eau-ou-coups-de-genie"><img src="{% static 'image/article7image.jpg' %}" class="img-fluid rounded-start" alt="..."></a>
+                      <h1 class="text-warning"> Même si les spécialistes de la communication politique demeurent perplexes devant les usages politiques de TikTok, cela ne veut pas dire que cette plateforme ne deviendra pas incontournable au fil du temps, affirme l'autrice.</h1> <br>
+                        <h3 >Médias sociaux, coups d’épée dans l’eau ou coups de génie?</h3>
+                        <p>Au cours des dernières semaines, nous avons vu Jagmeet Singh, chef du NPD, faire campagne sur la plateforme TikTok. Au fil des différentes vidéos, les électeurs ont pu le voir faire du longboard, danser, présenter son programme au rythme de musique populaire. Il y apparaît à l’aise, au courant des dernières tendances TikTok et en maîtrise du message.</p>
+                        <p>Lui-même estime qu’il est possible de passer des messages complexes grâce à cette plateforme très simple d’utilisation. Les courtes vidéos de 15 secondes permettent d’aller au vif du sujet dans un format et un langage accessibles pour un segment précis du public.</p>
+                        <p>Est-ce une bonne stratégie, que de faire campagne sur TikTok ?</p>
+                        <p>Oui, dans la mesure où le côté novateur de l’approche de Singh lui permet de générer de l’intérêt de la part des médias pour sa campagne et son message. Les journalistes font des reportages sur ses usages novateurs de cette plateforme.</p>
+                      <h5>4 SEPTEMBRE 2021 Par MIREILLE LALANCETTE  </h5>
+                    </div>
+                    <div class="col-md-7">
+                        <h1>Médias sociaux en campagne</h1>
+                        <p>L’avènement du Web 2.0 a fait osciller les chercheurs entre le cyber-optimisme et le cyber-pessimisme. Certains y ont vu un lieu de renouvellement de la démocratie, alors que d’autres ont critiqué les usages fallacieux et trompeurs des plateformes. Pour ceux-ci, les espoirs de dialogue et de changement de discours se sont vite évaporés. Les recherches dans le domaine à travers le monde ont vite montré que les politiques étaient frileux à utiliser tout le potentiel des plateformes, notamment comme lieu d’interaction et de dialogue avec les électeurs, de peur de perdre le contrôle du message.</p>
+                        <p>Bien que la campagne d’Obama en 2008 et son usage de Facebook pour rallier les électeurs aient marqué les esprits et que Trump ait complètement transformé le langage politique sur ces plateformes, ce ne sont pas tous les partis, ni tous les chefs et candidats, qui ont réussi à mobiliser les électeurs de la même manière grâce aux médias sociaux.</p>
+                        <p>La plupart des partis font un usage assez classique des plateformes de médias sociaux : ils mettent en image le chef, ils informent, ils mobilisent, ils organisent des collectes de fonds. Ces plateformes sont donc devenues des extensions de la communication politique plus classique. La différence reste néanmoins dans la pression d’« occuper » ce nouveau territoire afin de communiquer avec les électeurs. C’est de mauvais augure si un candidat ou un chef politique n’a pas de compte Facebook, Twitter ou Instagram.</p>
+                        <p>Une étude réalisée avec mon collègue du Groupe de recherche en communication politique Frédérick Bastien nous a permis d’étudier les attentes des citoyens par rapport à l’usage du Web par les candidats politiques. Contre toute attente, les gens recherchaient sur les médias sociaux des informations politiques à propos de la campagne et des candidats. Ils voulaient aussi le respect du code des plateformes : une plateforme visant l’interaction devait être utilisée telle quelle et non uniquement pour communiquer du haut vers le bas.</p>
+                        <p>De plus, les citoyens sondés et interrogés lors des groupes de discussion préféraient un usage équilibré des plateformes et aussi un usage respectueux de celles-ci. L’approche de style troll, où tous les coups sont permis, n’était pas du tout aimée de nos internautes. <br>
+                        <p>Non, comme il y a lieu de se questionner sur le rapport énergie/effets réels offert par ce type de communication politique. TikTok reste avant tout une plateforme utilisée par les jeunes qui en maîtrisent les codes et qui en font usage. Or, on sait que les jeunes votent peu et qu’ils ont donc une influence limitée le jour du scrutin.</p>
+                        <p>Alors, pourquoi les stratèges du NPD mettent-ils autant d’énergie à communiquer à l’aide de cette plateforme ? Différentes raisons les poussent certainement à aller de l’avant. Premièrement, leur budget électoral est très limité. Ils doivent donc être très imaginatifs afin d’attirer l’attention des électeurs et des médias. Deuxièmement, la plateforme leur permet justement de générer de l’engouement autour du chef et, ce faisant, de construire son image de leader auprès des jeunes progressistes.</p>
+                        <p>Une question se pose alors : est-ce la bonne plateforme pour joindre l’électorat ? Pas nécessairement, puisque cette plateforme est surtout fréquentée par des jeunes. De plus, le format des vidéos — de courtes vidéos de trois minutes ou moins — et les codes de la plateforme mettant l’accent sur la danse, la musique, l’humour et la dérision posent des défis de communication politique de taille.</p>
+                        <p>Comment transmettre un message clair en si peu de temps ? Comment respecter le code de la plateforme ET parler de politique ? Les réponses à ces questions demeurent floues. Même si les spécialistes de la communication politique demeurent perplexes devant les usages politiques de TikTok, cela ne veut pas dire que cette plateforme ne deviendra pas incontournable au fil du temps.</p>
+                        L’avenir dira si Singh a donné des coups d’épée dans l’eau lors de cette campagne avec ses vidéos TikTok ou bien s’il est un visionnaire qui sera ensuite imité comme Obama l’a été après 2008.</p>
+                    </div>
+                  </div>
+              </section>
+            <section class="article-8 ">
+                  <div class="row container-fluid py-5">
+                    <div class="col-md-4">
+                        <h6>Article : 8</h6>
+                        <a href="https://www.ledevoir.com/politique/canada/617151/intimidation-les-aspirants-candidats-a-l-election-federale-prets-a-braver-les-reseaux-sociaux"><img src="{% static 'image/artcle-8image.jpg' %}" alt=""></a>
+                        <p class="">Photo: Justin Tang La Presse canadienne</p>
+                        <h1 class="text-warning"> Les aspirants candidats à l’élection fédérale prêts à braver les réseaux sociaux </h1>
+                        <h6>Parmi les principales raisons des départs de la vie politique annoncés ces derniers mois, figurait la flambée de commentaires agressifs sur les réseaux sociaux.</h6>  
+                        <p>10 JUILLET 2021 | MARIE VASTEL | CANADA</p>
+                    </div>
+                    <div class="col-md-8">
+                          <p>Les aspirants candidats à l’élection fédérale répondent présents à l’appel des partis fédéraux, malgré le climat toxique sur les réseaux sociaux dénoncé par tant d’élus. Libéraux, conservateurs, bloquistes et néodémocrates assurent que la haine et les insultes propagées en ligne ne freinent pas leurs efforts de recrutement à quelques semaines d’une probable campagne électorale. Mais ils admettent que la question est fréquemment soulevée par les nouvelles recrues.</p>
+                          <p>Nombre d’élus municipaux ont annoncé qu’ils quitteront l’arène politique ces derniers mois. Et parmi les principales raisons de ces départs figurait la flambée de commentaires agressifs sur les réseaux sociaux. De Montréal à Gatineau, des maires et des conseillers municipaux ont expliqué qu’aucune carapace, si dure soit-elle, ne permettait de rester insensible face aux torrents de commentaires désobligeants.</p>
+                          <p> Le constat est le même sur les scènes fédérale et provinciale, où les élus n’ont pas choisi de partir, mais ont maintes fois dénoncé l’état du débat public en ligne.</p>
+                          <p>Malgré tout, des candidats se proposent pour briguer l’élection fédérale. Les partis fédéraux ont tous rapporté au Devoir qu’aucune recrue n’a refusé de rejoindre leurs rangs parce qu’elle craignait de subir les foudres d’internautes enragés.</p>
+                          <p>La ministre Mélanie Joly, qui codirige la campagne du Parti libéral, observeque les citoyens qui choisissent de faire de la politique active s’engagent déjà à faire de nombreux sacrifices — en laissant de côté une carrière, une entreprise ou leur famille. Le climat toxique sur les réseaux sociaux devient alors un moindre facteur, à son avis.</p>
+                          <p>« C’est sûr que c’est un phénomène de société. Mais quand une personne décide de faire de la politique, c’est parce qu’elle a envie de servir le public », fait valoir la ministre des Langues officielles en entrevue au Devoir. « C’est comme une mission de vie. À ce moment-là, la personne est prête à faire beaucoup de sacrifices, bien au-delà de ce qu’elle peut vivre en ligne. Ce qui va la faire souffrir, c’est la distance avec sa famille », affirme Mme Joly, qui souligne que la conciliation travail-famille est de loin le souci le plus souvent évoqué par les aspirants candidats.</p>
+                          <h4>Des discussions importantes</h4>
+                          <p>Tous les partis s’assurent ainsi d’expliquer à leurs recrues ce qui pourrait les attendre sur le Web, la façon de gérer les commentaires, et ils leur conseillent de porter plainte si les insultes vont trop loin.
+                            Les équipes de recrutement insistent en outre davantage sur l’utilité des médias sociaux que dans les dernières années, puisque la campagne se fera en contexte pandémique.</p>
+                          <p>« Les médias sociaux nous ont rapprochés beaucoup de la population et il ne faut pas que cette crainte-là nous mène à créer une certaine distance, affirme Mélanie Joly. Ce serait même contraire à l’idée démocratique. C’est pour ça que je n’ai aucune patience pour les imbéciles », ajoute celle qui a elle-même eu à porter plainte en raison de commentaires haineux en ligne. <br>
+                            Les principaux partis ont d’ailleurs hésité à discuter de l’impact du climat toxique sur les réseaux sociaux, refusant de donner de l’oxygène aux trolls qui y pullulent. « Le mieux que l’on puisse faire, c’est de les ignorer et de continuer de se concentrer sur ce qui est le mieux pour le Canada », a affirmé le directeur des communications du Parti conservateur, Cory Hann.</p>
+                      </div>
+                  </div>
+        
+              </section>
+            <section class="article-9">
+                  <div class="row container-fluid py-5">
+                        <div class="col-md-8 ">
+                          <h6>Article : 9</h6>
+                          <h1 class="text-warning">Les réseaux sociaux permettent de développer le chiffre d’affaires</h1>
+                          <h5>PAR Sophie Attia Dans Le Social Selling (2019), pages 31 à 35</h5>
+                          <p>Les réseaux sociaux permettent aux vendeurs d’améliorer leur chiffre d’affaires grâce à un impact sur chaque étape du cycle de vente.
+                            Que ce soit en B2B ou en B2C, les réseaux sociaux sont des outils sans égal pour détecter des prospects.CONSEIL
+                            Les vendeurs qui utilisent les réseaux sociaux ont 6 fois plus de chances de dépasser leurs objectifs commerciaux que les autres.
+                            Vous travaillez en B2B et vous ciblez les responsables qualité qui travaillent dans l’industrie agroalimentaire en Bretagne, LinkedIn vous permet de les trouver.
+                            Vous vendez des articles de pêche à la mouche, Facebook vous permet de cibler les amis de vos clients, dans lesquels il y a certainement d’autres passionnés de pêche à la mouche.Exemple
+                            J’ai travaillé il y a quelques années avec le département de développement économique du Conseil Général de l’Ardèche. Pour faire la promotion de ce département auprès des dirigeants d’entreprise, nous recherchions notamment à cibler les dirigeants ardéchois qui vivent ailleurs qu’en Ardèche.
+                            Nous avons cherché des fichiers d’e-mails, des adresses. Rien.
+                            Grâce à une page Facebook qui fait la promotion de l’entrepreneuriat en Ardèche, nous avons réussi à atteindre une partie de ces dirigeants car les entrepreneurs ardéchois qui vivent en Ardèche, et qui ont eu connaissance de cette page localement, ont des amis, entrepreneurs ardéchois, qui vivent ailleurs et que nous avons réussi à atteindre grâce à l’effet réseau et à l’algorithme de Facebook…
+                            </p>
+                            <h5> Mis en ligne sur Cairn.info le 06/05/2020</h5>
+                        </div>
+                        <div class="col-md-4">
+                          <a href="https://www.librairiedalloz.fr/livre/9782100791361-le-social-selling-utiliser-les-reseaux-sociaux-pour-vendre-2e-edition-sophie-attia/#targetDetail"> <img src="{% static 'image/images1.jpg' %}" alt=""></a>
+                        </div>
+                  </div>
+              </section>
+            <section class="articles-10">
+                  <div class=" container-fluid">
+                      <div class="row py-3">
+                        <div class="col-md-4">
+                          <h6>Article : 10</h6>
+                          <a href="http://www.lejournalinternational.info/limpact-des-reseaux-sociaux-sur-les-jeunes/"><img src="{% static 'image/businessman.jpg' %}" class="img-fluid rounded-start" alt="..."></a>
+                          <h1>Quelques statistiques</h1> <br>
+                                  <p>Jonathan Haidt, psychologue social américain, a constaté une augmentation de l’anxiété et de la dépression chez les jeunes adolescents américains entre 2011 et 2013. Le nombre d’adolescents admis à l’hôpital pour s’être fait du mal a grimpé à partir de cette période. Les centres pour le contrôle et la prévention des maladies ont, en 2015, étudié le nombre de jeunes filles admises à l’hôpital pour s’être faites du mal volontairement. Cette analyse s’est basée sur une période de sept ans (de 2008 à 2015). Sur 100,000 adolescentes âgées de 15 à 19 ans, plus de 62% des jeunes filles qui ont été admises à l’hôpital. Ensuite, sur une période de 20 ans (1999-2019), un bond spectaculaire dans la courbe des suicides d’adolescentes a été recensé.</p>
+                                  <p>Sur 1 million de jeunes filles, les suicides d’adolescentes ont augmenté de 70% par rapport à la décennie précédente. Chez les pré-adolescentes, il y’a eu une hausse de 151% des suicides chez ces jeunes filles. Les médecins ont constaté cette hausse à partir de 2009. En effet, cette année a été capitale dans l’histoire des réseaux sociaux car ils sont devenus disponibles sur les téléphones, leur popularité est ainsi montée en flèche. De plus, en août 2020, depuis le confinement, une hausse des suicides a été constatée chez les jeunes filles japonaises. Une des écoutantes de l’association tokyoïte de prévention du suicide a un avis très arrêté sur cette hausse de suicide chez les jeunes adolescentes : « les adolescentes sont encore plus dépendantes des réseaux sociaux, qui sont un exutoire, un espace de confidences, mais où les réponses des autres peuvent être décevantes, violentes, diffamantes».</p>
+                                  <a href="http://www.lejournalinternational.info/limpact-des-reseaux-sociaux-sur-les-jeunes/"><img src="{% static 'image/enfantistock_mooremedia.png' %}" class="img-fluid rounded-start" alt="..."></a>
+                                  <h3>Les solutions proposées pour diminuer l’influence des réseaux sociaux sur les jeunes</h3>
+                                  <p>Des experts proposent des solutions nécessaires pour les jeunes. Ilaria Montagni, doctorante en sciences psychologiques et psychiatriques, évoque cette solution : « Les réseaux sociaux peuvent s’avérer dangereux pour ceux qui les pratiquent de manière excessive. Il faut donc limiter cette pratique qui peut devenir très vite une addiction. ». Pour les adolescents qui ont développés des troubles obsessionnels suite aux réseaux sociaux, plusieurs techniques peuvent être mises en place : thérapie individuelle/collective/cognitive, sophrologie etc.
+                                     Pour Marie-Anne Sergerie, auteure du livre Cyberdépendance : Quand l’usage des technologies devient problématique, la responsabilisation des jeunes est nécessaire. « L’idée n’est pas de démoniser les technologies, mais de s’intéresser à ce que nos enfants font pour les aider à développer des comportements responsables ne serait-ce que comment échanger avec les autres en ligne, faire attention à ce qu’on publie… » dit-elle.
+                                  </p>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h1 class="card-title text-warning"> L’impact des réseaux sociaux sur les jeunes</h1>
+                            <p class="card-text mt-5">Les réseaux sociaux sont aujourd’hui indispensables à chacun d’entre nous, leur place dans la société est prépondérante. Une émission commentée sur Twitter peut susciter le buzz, des groupes pro-conspiration sur Facebook peuvent se développer à l’échelle internationale, une nouvelle mode peut naître grâce à Instagram… Les réseaux sociaux ont cette capacité de fédérer, réunir et de créer une conversation sur le monde qui nous entoure. Mais ils peuvent tomber dans les mains des personnes les plus vulnérables, en l’occurrence les jeunes. Dépression, complexes, regard critique sur leurs corps, les réseaux sociaux peuvent être source de mal-être pour eux. Nous allons voir dans cet article comment les réseaux sociaux ont conquis le cœur des jeunes pour le meilleur…et pour le pire.</p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p> 
+                                  <h2>Les effets néfastes des réseaux sociaux sur les jeunes</h2>
+                                  <p>Le désir d’un physique parfait</p>
+                                  <p>Les conséquences désastreuses des réseaux sociaux touchent le plus souvent les jeunes filles. Effectivement, notamment sur les réseaux sociaux, se trouve un culte du corps parfait, un diktat de la beauté. La société, à travers les réseaux sociaux, présente un modèle-type de femme : peau bronzée, taille marquée, hanches développées. Tous ces éléments rendent ce modèle de beauté inatteignable. A cause de tous ces éléments, la jeune fille pratique une comparaison avec les célébrités pouvant entraîner une perte d’estime de soi. Ce regard sévère sur le corps est accentué par les placements de produit des influenceurs pour vendre des pilules amincissantes (avec code promo en cadeau) ou autres systèmes miracles pour correspondre aux critères de beauté. La plupart des femmes que ces jeunes filles idéalisent ont pris leur photo sous une bonne lumière, avec une posture qui avantage leur corps et ont très certainement retouché leur visage ou certaines parties de leurs corps. Ensuite, elles ne savent pas que les personnalités d’Instagram ont utilisé du botox, fait des liposuccions, mis des implants pour avoir le corps qu’elles ont aujourd’hui.</p>
+                                  <a href="http://www.lejournalinternational.info/limpact-des-reseaux-sociaux-sur-les-jeunes/"><img src="{% static 'image/enfant3istock_fizkes.png' %}" class="img-fluid rounded-start" alt="..."></a>
+                                  <p>Des enfants vulnérables Le cyberharcèlement est un des effets néfastes sur les plus jeunes. En 2012, selon une enquête d’EU Kids Online, en France, les filles sont trois fois plus nombreuses que les garçons à déclarer être cyberharcelées sur Internet. De plus, selon une étude de Catherine Blaya, les garçons sont principalement les auteurs d’images et de vidéos humiliantes envers les filles. Selon Karyn Healy, psychologue à l’Université de Queensland, le harcèlement peut se prolonger sur les réseaux sociaux. « Oui, les médias sociaux peuvent causer des dommages. Un accès sans entrave peut exposer les jeunes au cyberharcèlement. Ils peuvent aussi se retrouver face à des contenus inappropriés dont la consultation peut avoir des conséquences dévastatrices. », dit-elle. Ensuite, les réseaux sociaux peuvent provoquer des enfants dépressifs. Cette dépression peut être liée au manque de “j’aime”, d’attention et d’amour sur les réseaux sociaux.</p>
+                                    <a href="http://www.lejournalinternational.info/limpact-des-reseaux-sociaux-sur-les-jeunes/"><img src="{% static 'image/enfant2istockfizkes.png' %}" class="img-fluid rounded-start" alt="..."></a>
+                                    <h4>Conclusion</h4>
+                                    <p>Comme nous avons pu le voir, les réseaux sociaux peuvent impacter temporairement ou durablement les jeunes. Si le jeune n’est pas protégé, est exposé aux mauvaises personnes et à un contenu sensible, non approprié à son âge, il y a un grand risque qu’il soit danger. Toutefois, les réseaux sociaux ne sont pas que négatifs. La continuité du lien social sur les réseaux après les moments à l’école renforce les amitiés, qui peuvent être un soutien face aux difficultés de l’adolescence. De plus, l’adolescent se sent entouré par ses amis, avec qui il peut partager les moments forts qu’il a vécu.
+                                        Selon la société canadienne de physiologie de l’exercice, les enfants de moins de 2 ans ne doivent pas être exposés aux écrans. Ensuite pour les enfants de 2 à 5 ans, on recommande moins d’une heure par jour. Puis, pour les 5-17 ans, moins de 2 heures par jour sont requis pour cette tranche d’âge. Mais est-ce-que les parents respectent vraiment toutes ces consignes à la lettre ? Est-il trop tard pour changer les choses ? Seules les prochaines années nous le diront.</p>
+                            <p class="card-text"><h6>Date: VENDREDI 30 OCTOBRE 2020 PAR MARINELLE NGIESE</h6> </p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </section>   
+          </section>
+      
+          <section class="pagination bg-success">
+            <div class="row container py-3">
+              <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination ">
+                    <li class="page-item">
+                      <a class="page-link" href="page7.html" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item "><a class="page-link" href="index.html">1</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="page2.html">2</a></li>
+                    <li class="page-item "><a class="page-link" href="page3.html">3</a> </li>
+                    <li class="page-item">
+                      <a class="page-link" href="page4.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            </section>
+          <div class="copy bg-success text-center fw-bold">
+            <p>&COPY;COPYRIGHT ASSE-BADIANE 2022</p>
+           </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

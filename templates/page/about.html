@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg  bg-secondary navbar-dark position-fixed w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SOCIAL MEDIAS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'articles' %}">Les Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'page_detail' %}">Détail D'artice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'profile' %}">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-brand text-warning active" href="{% url 'about' %}">A Propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'inscription' %}">Inscription</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'connexion' %}">Connexion</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'creation_article' %}">Création D'article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'modifier_article' %}">Modifier Article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'supprimer' %}">Suppprimer</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Recherche</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+      <section class="contact bg-dark text-light py-5 text-center ">
+        <div class="row py-5">
+          <div class="col">
+                <h3>L'objectif de ce projet était de créer un blog d'article complet avec Bootstrap, la version 5.</h3>
+            </div>
+        </div>
+      <div class="row align-items-center">
+        <div class="col-3"></div>
+        <div class="col-md-5">
+          <p><img src="{% static 'image/asse.JPG' %}" class="img-fluid w-50" alt=""></p>
+         </div>
+        <div class="col-md-4">
+          <h1 class="uppercase">Bonjour c'est <br> Mr ASSE Badiane </h1>
+          </div>
+      </div>
+      <div class="projets py-5">
+          <h1>Projet Réalisés</h1>
+          <div class="row py-5 container-fluid">
+            <div class="col-md-3">
+              <h4>Création d'un Site Web</h4>
+              <div class="Description">"Codez comme si le gars qui finit par maintenir votre code est un psychopathe violent qui sait où vous vivez." - Jeff Attwood</div>
+                <div class="Date ">AOUT-2021</div>
+                <a href="https://github.com/Bonde98/Front-End-avec-bootstrap5_pd_6"><i class="fab fa-github"></i><p>Voir</p></a>
+            </div>
+            <div class="col-md-3">
+              
+                <h4>Présentation d'un Héro Africain</h4> 
+              <div class="Description">Portrait: El Hadji Malick Sy<br>"Codez comme si le gars qui finit par maintenir votre code est un psychopathe violent qui sait où vous vivez." - Jeff Attwood</div>
+              <div class="Date">SEPTEMBRE-2021</div>
+              <a href="https://github.com/Bonde98/Maodo-Malick_pd_2"><i class="fab fa-github"></i><p>Voir</p></a>
+            </div>
+            <div class="col-md-3">
+              <h4>Création d'un PortFolio en HTML et CSS</h4>
+              <div class="Description">"Codez comme si le gars qui finit par maintenir votre code est un psychopathe violent qui sait où vous vivez." - Jeff Attwood</div>
+              <div class="Date"> NOVEMBRE-2021</div>
+              <a href="https://github.com/Bonde98/PortFolio_Pd_3"><i class="fab fa-github"></i><p>Voir</p></a> 
+            </div>
+            <div class="col-md-3">
+              <h4>Création d'une application de gestion contact</h4>
+                    <div class="Description">"Codez comme si le gars qui finit par maintenir votre code est un psychopathe violent qui sait où vous vivez." - Jeff Attwood</div>
+                    <div class="Date">DECEMBRE-2021</div>
+                    <a href="https://github.com/Bonde98/Gestionnaire-de-Contacts_pd_5"><i class="fab fa-github"></i><p>Voir</p></a
+             </div>
+          </div>
+           </div>
+        </div>
+
+        <div class="footer py-5">
+          <div class="row container-fluid">
+              <div class="col-md-3">
+                <h3>Mes Formations</h3>
+              <p>Devellopeur web et Mobile</p>
+              <p>Apprendre Python</p>
+              <p>Apprendre Django</p>
+              </div>
+              <div class="col-md-6">
+                <p><img src="{% static 'image/programmer-post-instagram-sur-pc.jpg' %}" class="img-fluid " alt=""></p>
+                <p>Nous ne pouvons pas prédire où nous conduira la Révolution Informatique. <br> Tout ce que nous savons avec certitude, c’est que, quand on y sera enfin, on n’aura pas assez de RAM.</p>
+              </div>
+              <div class="col-md-3">
+                <h3>Mon Parcours</h3>
+              <p>Créer des site web </p>
+              <p>Créer des PortFolios</p>
+              <p>créer une application</p>
+              </div>
+           </div>       
+         </div>
+   </section>
+
+<div class="copy bg-success text-center fw-bold pt-3">
+  <p>&COPY;COPYRIGHT ASSE-BADIANE 2022</p>
+  </div>
+     
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenue dans le blog d'article</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark position-fixed w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'index' %}">Accueil</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+           aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon btn-warning"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="navbar-brand text-warning active" aria-current="page" href="{% url 'index' %}">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'articles' %}">Les Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'page_detail' %}">Détail D'article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'about' %}">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'about' %}">A Propos</a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'creation_article' %}">Création D'article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'modifier_article' %}">Modifier Article</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'supprimer' %}">Supprimer</a>
+              </li>
+              <li class="nav-item">
+                {% if request.user.is_authenticated %}
+                <a class="nav-link " href="{% url 'login' %}">Déconnexion</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'login' %}">Connexion</a>
+              </li>
+              {% endif %}
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Recherche</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--sectiion Accueil-->
+      <section class="bg-dark text-light py-5  text-center">
+        <div class="container">
+            <div class="row py-5 align-items-center">
+                <h3>Bienvenue dans mon blog d'article ou je détailles l'impact des réseaux sociaux dans nos vie <br> Ce blog est composé de  <span class="text-warning">7 pages dont 10 articles bien détaillés </span></h3>
+                <div class="col">
+                    <h1>Les reseaux sont-ils devenus  <span class="text-warning">Le 5e Pouvoir</span></h1>
+                </div>
+                <div class="col">
+                    <img class="img-fluid w-80 py-5" src="{% static 'image/fontdecran.jpg' %}" alt="">
+                </div>
+                <h3 class="py-5">Depuis quelques années, nous assistons à vitesse grand V à la naissance d’un nouveau type de pouvoir. Par le passé, la grande majorité des sociétés démocratiques de la planète ont développés des codes et règles bien précis afin d’assurer une gouvernance démocratique ayant comme base trois pouvoirs indépendants et distincts, soit le législatif (les élus), l’exécutif (le Gouvernement) et le judiciaire (notre système judiciaire).</h3>
+            </div>
+        </div>
+        
+        <div class="container article10">
+            <div class="row">
+                <div class="col">
+                    <p>Article:10 <span class="text-warning">Appuyer sur le Titre pour voir l'article </span></p>
+                    <p>Date: VENDREDI 30 OCTOBRE 2020 PAR MARINELLE NGIESE</p>
+                    <a href="{% url 'articles' %}"><img class="img-fluid-sm w-80" src="{% static 'image/enfant3istock_fizkes.png' %}" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'articles' %}" class="text-warning"><h1>L’impact des réseaux sociaux sur les jeunes</h1></a>
+                    <p>Les réseaux sociaux sont aujourd’hui indispensables à chacun d’entre nous, leur place dans la société est prépondérante. Une émission commentée sur Twitter peut susciter le buzz, des groupes pro-conspiration sur Facebook peuvent se développer à l’échelle internationale, une nouvelle mode peut naître grâce à Instagram… Les réseaux sociaux ont cette capacité de fédérer, réunir et de créer une conversation sur le monde qui nous entoure. Mais ils peuvent tomber dans les mains des personnes les plus vulnérables, en l’occurrence les jeunes. Dépression, complexes, regard critique sur leurs corps, les réseaux sociaux peuvent être source de mal-être pour eux. Nous allons voir dans cet article comment les réseaux sociaux ont conquis le cœur des jeunes pour le meilleur…et pour le pire.</p>
+                    <p>Il s’agit d’une carte plus large avec un texte de soutien ci-dessous comme une introduction naturelle à un contenu supplémentaire. Ce contenu est un peu plus long.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container article9 py-5">
+            <div class="row">
+                <div class="col">
+                    <p>Articele:9 <span class="text-warning">Appuyer sur le Titre pour voir l'article </span> </p>
+                    <a href="{% url 'articles' %}"><img class="img-fluid w-70 text-warning" src="{% static 'image/businessman.jpg' %}" alt="200px"></a>
+                    <p>Mis en ligne sur Cairn.info le 06/05/2020</p>
+                </div>
+                <div class="col-md">
+                  <a href="{% url 'articles' %}" class="text-warning"><h1>Les réseaux sociaux permettent de développer le chiffre d’affaires</h1></a> 
+                    <p>Les réseaux sociaux permettent aux vendeurs d’améliorer leur chiffre d’affaires grâce à un impact sur chaque étape du cycle de vente. Que ce soit en B2B ou en B2C, les réseaux sociaux sont des outils sans égal pour détecter des prospects. CONSEIL Les vendeurs qui utilisent les réseaux sociaux ont 6 fois plus de chances de dépasser leurs objectifs commerciaux que les autres. Vous travaillez en B2B et vous ciblez les responsables qualité qui travaillent dans l’industrie agroalimentaire en Bretagne, LinkedIn vous permet de les trouver. Vous vendez des articles de pêche à la mouche, Facebook vous permet de cibler les amis de vos clients, dans lesquels il y a certainement d’autres passionnés de pêche à la mouche. Exemple J’ai travaillé il y a quelques années avec le département de développement économique du Conseil Général de l’Ardèche</p>
+                </div>
+            </div>
+        </div>
+        <div class="container article8">
+            <div class="row py-5">
+                <div class="col">
+                    <p>Article:8 <span class="text-warning">Appuyer sur le Titre voir l'article </span></p>
+                    <a href="{% url 'articles' %}" class="text-warning"><img src="{% static 'image/artcle-8image.jpg' %}" alt=""></a>
+                    <p>Photo: Justin Tang La Presse canadienne</p>
+                    <p>10 JUILLET 2021 | MARIE VASTEL | CANADA</p>
+                </div>
+                <div class="col">
+                   <a href="{% url 'articles' %}" class="text-warning"><h1>Les aspirants candidats à l’élection fédérale prêts à braver les réseaux sociaux</h1></a> 
+                    <h4>Parmi les principales raisons des départs de la vie politique annoncés ces derniers mois, figurait la flambée de commentaires agressifs sur les réseaux sociaux.</h4>
+                    <p>Les aspirants candidats à l’élection fédérale répondent présents à l’appel des partis fédéraux, malgré le climat toxique sur les réseaux sociaux dénoncé par tant d’élus. Libéraux, conservateurs, bloquistes et néodémocrates assurent que la haine et les insultes propagées en ligne ne freinent pas leurs efforts de recrutement à quelques semaines d’une probable campagne électorale. Mais ils admettent que la question est fréquemment soulevée par les nouvelles recrues.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container article7">
+            <div class="row py-3">
+                <div class="col-md-6">
+                    <p>Article:7 <span class="text-warning">Appuyer sur le Titre pour voir l'article </span></p>
+                    <a href="{% url 'articles' %}"><img class="img-fluid w-60"  src="{% static 'image/article7image.jpg' %}" alt="250px"></a>
+                    <p>4 SEPTEMBRE 2021 Par MIREILLE LALANCETTE </p>
+                </div>
+                <div class="col-md-6">
+                    <a href="{% url 'articles' %}" class="text-warning"><h1>Médias sociaux, coups d’épée dans l’eau ou coups de génie?</h1></a>  <br>
+                    <h4>Même si les spécialistes de la communication politique demeurent perplexes devant les usages politiques de TikTok, cela ne veut pas dire que cette plateforme ne deviendra pas incontournable au fil du temps», affirme l'autrice.</h4> <br>
+                    <p>Au cours des dernières semaines, nous avons vu Jagmeet Singh, chef du NPD, faire campagne sur la plateforme TikTok. Au fil des différentes vidéos, les électeurs ont pu le voir faire du longboard, danser, présenter son programme au rythme de musique populaire. Il y apparaît à l’aise, au courant des dernières tendances TikTok et en maîtrise du message.</p>
+                    <p>Lui-même estime qu’il est possible de passer des messages complexes grâce à cette plateforme très simple d’utilisation. Les courtes vidéos de 15 secondes permettent d’aller au vif du sujet dans un format et un langage accessibles pour un segment précis du public.</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="copy bg-success text-center fw-bold pt-3">
+        <p>&COPY;COPYRIGHT ASSE-BADIANE 2022</p>
+      </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
+
