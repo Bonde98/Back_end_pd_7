@@ -55,8 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blogbackend.urls'
-LOGIN_REDIRECT_URL = "index"
-LOGOUT_REDIRECT_URL = "index"
+LOGIN_REDIRECT_URL = "accueil_art"
+LOGOUT_REDIRECT_URL = "logine_art"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

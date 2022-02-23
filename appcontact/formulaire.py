@@ -5,6 +5,9 @@ from django.forms import ModelForm
 from django import forms
 from .models import Tabcontact
 
+
+
+
 class TabcontactForm(forms.ModelForm):
     class Meta:
         # Préciser le model utiliser
