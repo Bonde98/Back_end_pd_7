@@ -45,7 +45,7 @@
               </li>
               <li class="nav-item">
                 {% if request.user.is_authenticated %}
-                <a class="nav-link " href="{% url 'login' %}">Déconnexion</a>
+                <a class="nav-link " href="{% url 'logout' %}">Déconnexion</a>
               </li>
               {% else %}
               <li class="nav-item">
@@ -68,7 +68,7 @@
               {% csrf_token %}
              
               <div class="alert alert-primary" role="alert">
-                Etes-Vous sur de supprimer le contact de!{{ articles }}
+                Etes-Vous sûre de supprimer le contact de: {{ articles }} ...?
               </div>
                 <button type="submit"  class="btn btn-danger">OUI</button>
                 <button href="{% url 'article_art' %}" type="submit" class="btn btn-info">NON</button>

@@ -1,8 +1,10 @@
+
 from django.shortcuts import redirect, render,get_object_or_404
-from .forms import LogineForm,Signupform
+from .forms import LogineForm,SignUpForm
 from .models import article
 from django.contrib.auth  import authenticate ,login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -33,7 +35,7 @@ def logine(request):
         user = authenticate(request,username=username,password=password)
         if user is not None:
            login(request,user)
-           return redirect("/new_article/")
+           return redirect("/art_accueil/")
     
     return render(request,"articles/logine.html",{'forme':forme})
 
@@ -120,14 +122,30 @@ def delete_article(request,id):
     return render(request,"articles/delete_article.html",{"articles":articles})
 
 
-def asse(request):
+'''def asse(request):
     if request.method == "POST":
-        form = Signupform(request.POST)
-        if form.is_valid():
-            form.save()
+        asse = Signupform(request.POST)    
+        if asse.is_valid():
+            asse.save()
+            username = asse.cleaned_data.get("username")
+            raw_password = asse.cleaned_data.get("password1")
+            user = authenticate(username=username,password=raw_password)
             return redirect("/logine/")
     else:
-        form = Signupform()
-        return redirect("/inscrire/")
-    return render(request,"articles/asse.html",{'form':form})
-    
+        asse = Signupform()
+        return redirect("/asse/")
+    return render(request,"articles/asse.html",{'asse':asse})
+    '''
+
+def register_user(request):
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get("username")
+            raw_password = form.cleaned_data.get("password1")
+            user = authenticate(username=username, password=raw_password)
+            return redirect("/logine/")
+    else:
+        form = SignUpForm()
+    return render(request, "articles/asse.html", {"form": form})

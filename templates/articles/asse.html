@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Page d'inscripion</title>
 </head>
-<body>
+<body class="bg-success">
     <!--Section navbar-->
     <nav class="navbar navbar-expand-lg bg-secondary navbar-dark position-fixed w-100">
         <div class="container-fluid">
@@ -45,14 +45,16 @@
           </div>
         </div>
       </nav>
-    <h1 class="dark py-5">Bonjouuuuur</h1> 
-    <h1>Hello Word</h1>
-    <form action="" method="post">
+    
+    <form action="" method="post" class="text-center col-md-8 m-auto py-5">
         {% csrf_token %}
-        {{ form }}
+        <h1 class="py-5 text-center"> Bienvenue dans le blog d'article. <br> inscrit-toi vite et crée tes propres articles gratuitement</h1> 
+        
+        {{ form.as_p }}
         <button class="btn btn-save bg-primary">Enregistrer</button> 
     </form> 
 
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
