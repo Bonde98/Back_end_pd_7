@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-7bz2!%_b&4z=kg=eu9tx6tr*i45ermb%7h+@oy)7m9f==#66jg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#c'est ajouter
+ALLOWED_HOSTS = ['blog-d-article.herokuapp.com']
 
 
 # Application definition
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #c'est ajouter
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -135,3 +138,12 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+		
+
+		
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import dj_database_url
+
+prod_db = dj_database_url.config(conn_max_age=500)
+BASES DE DONNEES['default'].update(prod_db)
