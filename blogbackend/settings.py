@@ -143,3 +143,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 		
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+PROJET_ROOT = BASE_DIR
+STATIC_ROOT = os.path.join(PROJET_ROOT, 'staticfiles')
+STATIC_URL = '/statique/'
+# Répertoires de recherche supplémentaires pour collectstatic pour trouver des fichiers statiques
+STATICFILES_DIRS = (
+			os.path.join(PROJET_ROOT, 'statique'),
+		)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+from django import dj_database_url
+
+prod_db = dj_database_url.config(conn_max_age=500)
+BASES_DE_DONNEES = ['default'].update(prod_db)
