@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7bz2!%_b&4z=kg=eu9tx6tr*i45ermb%7h+@oy)7m9f==#66jg
 DEBUG = True
 
 #c'est ajouter
-ALLOWED_HOSTS = ['blog-d-article.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -141,7 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 		
 
 		
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+'''STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 PROJET_ROOT = BASE_DIR
 STATIC_ROOT = os.path.join(PROJET_ROOT, 'staticfiles')
@@ -156,4 +156,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 from django import dj_database_url
 
 prod_db = dj_database_url.config(conn_max_age=500)
-BASES_DE_DONNEES = ['default'].update(prod_db)
+BASES_DE_DONNEES = ['default'].update(prod_db)'''
