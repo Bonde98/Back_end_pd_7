@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 
 
 def accueil(request):
-    return render(request,'articles/accueil.html')
+    return render(request,'articles/index.html')
 
 
 def les_articles(request):
