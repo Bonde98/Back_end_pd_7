@@ -23,7 +23,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("appcontact.urls")),
+    #path('',include("appcontact.urls")),
     path('',include("myarticle.urls")),
 
     
