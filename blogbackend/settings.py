@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 
-import dj_database_url
+#import dj_database_url
 from pathlib import Path
 from telnetlib import LOGOUT
 
