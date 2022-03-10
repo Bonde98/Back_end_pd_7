@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 import os
-from django import dj_database_url
+import django_heroku
+import dj_database_url
 from pathlib import Path
 from telnetlib import LOGOUT
+
+import django
 #from re import template
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -142,8 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'	
 
-
-
+django_heroku.settings(locals())
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES = ['default'].update(prod_db)
