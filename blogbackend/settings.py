@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-7bz2!%_b&4z=kg=eu9tx6tr*i45ermb%7h+@oy)7m9f==#66jg
 DEBUG = True
 
 #c'est ajouter
-ALLOWED_HOSTS = ['blog-d-article.herokuapp.com']
+ALLOWED_HOSTS = ['blog-d-article.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -143,7 +143,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'	
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 '''import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
