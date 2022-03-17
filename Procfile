@@ -1,1 +1,1 @@
-gunicorn. blogbackend.wsgi 
+web: gunicorn .blogbackend:app --log-file=-
